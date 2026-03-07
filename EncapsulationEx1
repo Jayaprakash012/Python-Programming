@@ -1,0 +1,19 @@
+class Student:
+    def __init__(self, name, marks):
+        self.name = name        # public variable
+        self.__marks = marks    # private variable
+
+    def display(self):
+        print("Name:", self.name)
+        print("Marks:", self.__marks)
+
+    def set_marks(self, marks):
+        self.__marks = marks
+
+    def get_marks(self):
+        return self.__marks
+
+s1 = Student("Jaya", 85)
+s1.display()
+s1.set_marks(90)
+print("Updated Marks:", s1.get_marks())
